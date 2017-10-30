@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['sitelinks/sitelinkscheck.js','sitelinks/cciu/sitelinks.js'],
+  specs: ['form/formcheck.js'],
   capabilities: {
   	'browserName': 'firefox'
   },
@@ -10,9 +10,13 @@ exports.config = {
   params:{
   	site:{
   		alias: 'CCIU',
-  		url:'http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/types-of-coverage/',
+  		url:'http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/',
+      page: 'form/',
   		zip:'90210',
-  		source_track: 'CCOI_landing'
+  		source_track: 'CCOI_landing',
+      paths:{
+        sitelinks: 'sitelinks/',
+      }
   	}
   }
 };

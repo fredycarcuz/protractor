@@ -46,11 +46,11 @@ describe('Sitelinks Page check', function() {
       expect((menu.menuContainer).isDisplayed()).toBe(true);
       expect((menu.first).isDisplayed()).toBe(true);
       expect((menu.last).isDisplayed()).toBe(true);
-      ///expect(listText).toBe('2 Minute Quote');
+      expect((menu.list).isDisplayed()).toBe(true);
     });
 
   //custom for site: example
-    // landing/cciu/landing.js (zipbox/content )
+    // sitelinks/cciu/sitelinks.js 
 
   // browser.pause();
 });
