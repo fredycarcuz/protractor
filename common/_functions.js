@@ -26,6 +26,11 @@ var Functions = function(){
 		var FillMultiDriver = require('../common/fillmultidriver');
     	var fillMultiDriver = FillMultiDriver();
     	browser.sleep(1000);
+	};
+	this.loadMultiVehicle = function(){
+		var FillMultiVehicle = require('../common/fillmultivehicle');
+    	var fillMultiVehicle = FillMultiVehicle();
+    	browser.sleep(1000);
 	};	
 	this.focusNewWindow = function(callback){
 		browser.getAllWindowHandles().then(function(handles){
