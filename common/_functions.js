@@ -22,6 +22,11 @@ var Functions = function(){
     	var fillSingleDriver = FillSingleDriver();
     	browser.sleep(1000);
 	};
+	this.loadMultiDriver = function(){
+		var FillMultiDriver = require('../common/fillmultidriver');
+    	var fillMultiDriver = FillMultiDriver();
+    	browser.sleep(1000);
+	};	
 	this.focusNewWindow = function(callback){
 		browser.getAllWindowHandles().then(function(handles){
     		browser.switchTo().window(handles[1]).then(function(){
