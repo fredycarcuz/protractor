@@ -18,9 +18,7 @@ var FillMultiVehicle = function(){
 	element(by.id('dob_d1')).sendKeys('12111988');//issue
 	element(by.id('gender_d1')).$('[value="M"]').click();
 	element(by.id('residenceStatus_d1')).$('[value="Own"]').click();
-    
 
-    
 	//Carrier checkbox      
     var carried = element(by.id('carried_inpNo'));
     var newE = carried.element(by.xpath('..'));
