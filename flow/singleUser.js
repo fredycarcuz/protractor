@@ -34,7 +34,8 @@ describe('Flow for Single Driver', function() {
     functions.waitToLoad();
     //Focus on new window
     //then fill the single Driver
-    functions.focusNewWindow(functions.loadSingleDriver);
+    //loadSingleDriver(currentlyInsured,callback)
+    functions.focusNewWindow(false,functions.loadSingleDriver);
     //submit the form
     functions.submitButton('getquotes');      
 	});

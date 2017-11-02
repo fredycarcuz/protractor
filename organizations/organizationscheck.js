@@ -20,7 +20,8 @@ describe('Organizations Page check', function() {
   it('Should display the content', function(){
     expect((legalContent.organizationList).isPresent()).toBe(true);
     expect(legalContent.organization1).toBe('21st Century Insurance');
-    expect(legalContent.organizationLast).toBe('American Home Assurance');
+    expect(legalContent.organizationRandom).toBe('American Home Assurance');
+    expect(legalContent.organizationLast).toBe('Zurich North America');
   });
 
   it('Should display the Footer', function(){

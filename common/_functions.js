@@ -17,9 +17,9 @@ var Functions = function(){
 		browser.waitForAngularEnabled(false);
     	browser.sleep(500);
 	};
-	this.loadSingleDriver = function(){
+	this.loadSingleDriver = function(currentInsured){
 		var FillSingleDriver = require('../common/fillsingledriver');
-    	var fillSingleDriver = FillSingleDriver();
+    	var fillSingleDriver = FillSingleDriver(currentInsured);
     	browser.sleep(1000);
 	};
 	this.loadMultiDriver = function(){
@@ -31,11 +31,11 @@ var Functions = function(){
 		var FillMultiVehicle = require('../common/fillmultivehicle');
     	var fillMultiVehicle = FillMultiVehicle();
     	browser.sleep(1000);
-	};	
-	this.focusNewWindow = function(callback){
+	};
+	this.focusNewWindow = function(currentInsured,callback){
 		browser.getAllWindowHandles().then(function(handles){
     		browser.switchTo().window(handles[1]).then(function(){
-    			callback();
+    			callback(currentInsured);
     		});
     	});
 	}
