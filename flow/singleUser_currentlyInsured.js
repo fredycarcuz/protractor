@@ -10,7 +10,7 @@ var zipbox = new Zipbox();
 var footer = new Footer();
 var functions = new Functions();
 
-describe('Flow for Multi Vehicle', function() {
+describe('Flow for Single Driver', function() {
   it('Should load the Landing Page',function(){
     expect((loadPage.body).isDisplayed()).toBe(true);
 
@@ -33,12 +33,12 @@ describe('Flow for Multi Vehicle', function() {
   it('Should open and fill the form Page', function() {      
     functions.waitToLoad();
     //Focus on new window
-    //then fill the multi Vehicle
-    //loadMultiVehicle(currentlyInsured,callback)
-    functions.focusNewWindow(false,functions.loadMultiVehicle);
+    //then fill the single Driver
+    //loadSingleDriver(currentlyInsured,callback)
+    functions.focusNewWindow(true,functions.loadSingleDriver);
     //submit the form
     functions.submitButton('getquotes');      
-  });
+	});
   it('Should display the Thankyou Page', function(){
     //TYP
     functions.waitToLoad();

@@ -1,4 +1,4 @@
-var FillMultiVehicle = function(){
+var FillMultiVehicle = function(currentlyInsured){
     //1st vehicle
 	element(by.id('year_v1')).$('[value="2015"]').click(); browser.sleep(200);
     element(by.id('make_v1')).$('[value="AUDI"]').click(); browser.sleep(200);
@@ -19,10 +19,16 @@ var FillMultiVehicle = function(){
 	element(by.id('gender_d1')).$('[value="M"]').click();
 	element(by.id('residenceStatus_d1')).$('[value="Own"]').click();
 
-	//Carrier checkbox      
-    var carried = element(by.id('carried_inpNo'));
-    var newE = carried.element(by.xpath('..'));
-    newE.click();
+	//Carrier checkbox
+    if(!currentlyInsured){
+        var carried = element(by.id('carried_inpNo'));
+        var newE = carried.element(by.xpath('..'));
+        newE.click();
+    }else{
+        var FillCurrentInsured = require('../common/fillcurrentinsured');
+        var fillCurrentInsured = FillCurrentInsured();
+    }      
+    
     //Personal
     element(by.id('contaddress')).sendKeys('13 Main Street ');
     element(by.id('email')).sendKeys('qa@vantagemedia.com');

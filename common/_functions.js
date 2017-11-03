@@ -17,25 +17,25 @@ var Functions = function(){
 		browser.waitForAngularEnabled(false);
     	browser.sleep(500);
 	};
-	this.loadSingleDriver = function(currentInsured){
+	this.loadSingleDriver = function(currentlyInsured){
 		var FillSingleDriver = require('../common/fillsingledriver');
-    	var fillSingleDriver = FillSingleDriver(currentInsured);
+    	var fillSingleDriver = FillSingleDriver(currentlyInsured);
     	browser.sleep(1000);
 	};
-	this.loadMultiDriver = function(){
+	this.loadMultiDriver = function(currentlyInsured){
 		var FillMultiDriver = require('../common/fillmultidriver');
-    	var fillMultiDriver = FillMultiDriver();
+    	var fillMultiDriver = FillMultiDriver(currentlyInsured);
     	browser.sleep(1000);
 	};
-	this.loadMultiVehicle = function(){
+	this.loadMultiVehicle = function(currentlyInsured){
 		var FillMultiVehicle = require('../common/fillmultivehicle');
-    	var fillMultiVehicle = FillMultiVehicle();
+    	var fillMultiVehicle = FillMultiVehicle(currentlyInsured);
     	browser.sleep(1000);
 	};
-	this.focusNewWindow = function(currentInsured,callback){
+	this.focusNewWindow = function(currentlyInsured,callback){
 		browser.getAllWindowHandles().then(function(handles){
     		browser.switchTo().window(handles[1]).then(function(){
-    			callback(currentInsured);
+    			callback(currentlyInsured);
     		});
     	});
 	}
