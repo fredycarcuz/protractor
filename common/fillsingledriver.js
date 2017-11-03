@@ -1,7 +1,7 @@
 var Functions = require('../common/_functions');
 var functions = new Functions();
 
-var FillSingleDriver = function(currentlyInsured){
+var FillSingleDriver = function(incidents, currentlyInsured){
 	element(by.id('year_v1')).$('[value="2015"]').click(); browser.sleep(200);
     element(by.id('make_v1')).$('[value="AUDI"]').click(); browser.sleep(200);
     element(by.id('model_v1')).$('[value="A3"]').click(); browser.sleep(700);
@@ -11,6 +11,20 @@ var FillSingleDriver = function(currentlyInsured){
 	element(by.id('dob_d1')).sendKeys('12111988');//issue
 	element(by.id('gender_d1')).$('[value="M"]').click();
 	element(by.id('residenceStatus_d1')).$('[value="Own"]').click();
+
+    //TODO: Move out to conf file
+    var incidentsList = { 
+        "incidents":[
+        {"type": "DUI"},
+        {"type": "Accident"}
+        ]};
+
+    if(!incidents){
+        //'No' is selected by default
+    }else{
+        var FillIncidents = require('../common/fillincidents');
+        var fillIncidents = FillIncidents(1,incidentsList);
+    }
 	//Carrier checkbox      
     if(!currentlyInsured){
     var carried = element(by.id('carried_inpNo'));
