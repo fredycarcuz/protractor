@@ -1,4 +1,4 @@
-var FillMultiVehicle = function(currentlyInsured){
+var FillMultiVehicle = function(incidents, currentlyInsured){
     //1st vehicle
 	element(by.id('year_v1')).$('[value="2015"]').click(); browser.sleep(200);
     element(by.id('make_v1')).$('[value="AUDI"]').click(); browser.sleep(200);
@@ -18,6 +18,20 @@ var FillMultiVehicle = function(currentlyInsured){
 	element(by.id('dob_d1')).sendKeys('12111988');//issue
 	element(by.id('gender_d1')).$('[value="M"]').click();
 	element(by.id('residenceStatus_d1')).$('[value="Own"]').click();
+
+    //TODO: Move out to conf file
+    var incidentsList = { 
+        "incidents":[
+        {"type": "DUI"},
+        {"type": "Accident"}
+        ]};
+
+    if(!incidents){
+        //'No' is selected by default
+    }else{
+        var FillIncidents = require('../common/fillincidents');
+        var fillIncidents = FillIncidents(1,incidentsList);
+    }
 
 	//Carrier checkbox
     if(!currentlyInsured){

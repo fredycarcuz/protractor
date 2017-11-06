@@ -1,5 +1,4 @@
-/*
----
+/* 
 getSelectById
 Gets the current option selected on the Select input
 @elementId: Select id
@@ -27,9 +26,9 @@ var Functions = function(){
     	var fillMultiDriver = FillMultiDriver(incidents,currentlyInsured);
     	browser.sleep(1000);
 	};
-	this.loadMultiVehicle = function(currentlyInsured){
+	this.loadMultiVehicle = function(incidents,currentlyInsured){
 		var FillMultiVehicle = require('../common/fillmultivehicle');
-    	var fillMultiVehicle = FillMultiVehicle(currentlyInsured);
+    	var fillMultiVehicle = FillMultiVehicle(incidents,currentlyInsured);
     	browser.sleep(1000);
 	};
 	this.focusNewWindow = function(incidents,currentlyInsured,callback){

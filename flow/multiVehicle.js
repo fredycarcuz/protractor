@@ -34,8 +34,8 @@ describe('Flow for Multi Vehicle', function() {
     functions.waitToLoad();
     //Focus on new window
     //then fill the multi Vehicle
-    //loadMultiVehicle(currentlyInsured,callback)
-    functions.focusNewWindow(false,functions.loadMultiVehicle);
+    //loadMultiVehicle(Incidents,currentlyInsured,callback)
+    functions.focusNewWindow(false,false,functions.loadMultiVehicle);
     //submit the form
     functions.submitButton('getquotes');      
   });

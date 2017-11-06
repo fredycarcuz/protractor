@@ -34,8 +34,8 @@ describe('Flow for Multi Driver', function() {
     functions.waitToLoad();
     //Focus on new window
     //then fill the multi Driver
-    //loadSingleDriver(currentlyInsured,callback)
-    functions.focusNewWindow(false,functions.loadMultiDriver);
+    //loadSingleDriver(Incidents,currentlyInsured,callback)
+    functions.focusNewWindow(false,false,functions.loadMultiDriver);
     //submit the form
     functions.submitButton('getquotes');      
   });

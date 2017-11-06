@@ -1,6 +1,6 @@
 /*
 Fill incidents by driver and type
-@driverNumber: Numeric. The numerica id of the driver
+@driverNumber: Numeric. The numeric id of the driver
 @type: Incident type: DUI, Ticket, Accident, Claim
 */
 var FillIncidents = function(driverNumber,incidentTypeList){

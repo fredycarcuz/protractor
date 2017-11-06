@@ -5,7 +5,7 @@ var FillCurrentInsured = function(){
     newE.click();
     browser.sleep(700);
     //Insurance information
-    element(by.id('current_ins_company')).$('[value="AARP"]').click(); browser.sleep(1000);
+    element(by.id('current_ins_company')).$('[value="3"]').click(); browser.sleep(1000);//AARP
     element(by.id('ins_exp_renew_date')).sendKeys('11032018');
     element(by.id('dur_ins_company_yr')).sendKeys('2');
     element(by.id('dur_ins_company_mnth')).sendKeys('5');
