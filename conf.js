@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['flow/prefillDriverInformation.js'],
+  specs: ['form/formcheck.js'],
   capabilities: {
   	'browserName': 'firefox'
   },
@@ -10,8 +10,9 @@ exports.config = {
   params:{
   	site:{
   		alias: 'CCIU',
+      src: 'cciu_google',
   		url:'http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/',
-      page: 'get-quotes/',
+      page: 'form/',
   		zip:'90210',
   		source_track: '',
       paths:{
@@ -20,6 +21,6 @@ exports.config = {
         landing: 'get-quotes/'
       }
   	},
-    driverInfo: require('./data/singleDriverIncidents.json')
+    driverInfo: require('./data/singleDriver.json')
   }
 };
