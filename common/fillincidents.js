@@ -4,8 +4,8 @@ Fill incidents by driver and type
 @type: Incident type: DUI, Ticket, Accident, Claim
 */
 var FillIncidents = function(driverNumber,incidentTypeList){
-        var incidents = element(by.id('incident_yes_d'+ driverNumber));
-        var newE = incidents.element(by.xpath('..'));
+        var incidentsBtn = element(by.id('incident_yes_d'+ driverNumber));
+        var newE = incidentsBtn.element(by.xpath('..'));
         newE.click();
         browser.sleep(400);
     //Incidents
@@ -27,7 +27,7 @@ var FillIncidents = function(driverNumber,incidentTypeList){
             }
         element(by.id('incidentDamaged_'+ incidentNumber +'_d'+ driverNumber)).$('[value="Property"]').click(); browser.sleep(400);
         element(by.id('incidentFault_'+ incidentNumber +'_d'+ driverNumber)).$('[value="y"]').click(); browser.sleep(400);
-        element(by.id('incidentAmount_'+ incidentNumber +'_d'+ driverNumber)).sendKeys('3400'); browser.sleep(400);
+        element(by.id('incidentAmount_'+ incidentNumber +'_d'+ driverNumber)).sendKeys('3400'); browser.sleep(500);
         }
         element(by.id('incidentYear_'+ incidentNumber +'_d'+ driverNumber)).$('[value="2016"]').click(); browser.sleep(400);
         element(by.id('incidentMonth_'+ incidentNumber +'_d'+ driverNumber)).$('[value="10"]').click(); browser.sleep(400);

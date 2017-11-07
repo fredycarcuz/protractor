@@ -1,0 +1,36 @@
+{ 
+        "drivers":[
+        {"driver": {
+            "firstName":"Jonh",
+            "lastName":"Rambo",
+            "dob":"12111988",
+            "gender":"M",
+            "residenceStatus":"Own"
+        }
+        },
+        {"driver": {
+            "firstName":"Mary",
+            "lastName":"Cooper",
+            "dob":"12111990",
+            "gender":"F",
+            "residenceStatus":"Own",
+            "relationship": "Spouse"
+        }
+        }
+        ],
+        "vehicles":[
+        {"vehicle": {
+            "year": "2015",
+            "make": "AUDI",
+            "model": "A3",
+            "subModel": "SEDAN 4 DOOR"
+        }
+        }
+        ],
+        "personal": {
+            "currentlyInsured" : true,
+            "address": "13 Fake Street",
+            "email": "qa@vantagemedia.com",
+            "phone": "3056464444"
+        }
+    }

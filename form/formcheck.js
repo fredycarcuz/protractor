@@ -70,7 +70,7 @@ describe('Form Page check', function() {
     expect(formFields.maritalstat_d1).toBe('Single');
     expect(formFields.credRating_d1).toBe('Good');
     expect((formFields.residenceStatus_d1).isPresent()).toBe(true);
-    expect(formFields.resicenceYears_d1).toBe('3');
+    expect(formFields.residenceYears_d1).toBe('3');
     expect(formFields.residenceMonths_d1).toBe('0');
     expect(formFields.suspended_d1).toBe('Current');
     //TODO: Match state name with zipcode value
