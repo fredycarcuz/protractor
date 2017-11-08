@@ -1,4 +1,4 @@
-var Quotes = function(){
+var Results = function(){
 	this.cta = element(by.id('vm-cta-content'));
 	//this.subCta = element(by.css(''));
 	this.logos = element(by.id('content')).all(by.css('.vm-logo'));
@@ -8,4 +8,4 @@ var Quotes = function(){
 	this.contentByState = element(by.id('article'));
 }
 
-module.exports = Quotes;
+module.exports = Results;

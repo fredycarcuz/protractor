@@ -9,7 +9,7 @@ var results = new Results();
 var footer = new Footer();
 
 
-describe('Quotes Page check', function() {
+describe('Thankyou Page check', function() {
   it('Should load the Landing',function(){
     expect((loadPage.body).isDisplayed()).toBe(true);
   });
