@@ -57,6 +57,8 @@ describe('Form Page check', function() {
     expect(formFields.milesYear_v1).toBe('10001 - 12500');
     expect(formFields.vehGarage_v1).toBe('No Cover');
     expect(formFields.vehSecurity_v1).toBe('No Alarm');
+    expect((formFields.addVehicle).isDisplayed()).toBe(true);
+
   });
 
   it('Should display Driver Information', function(){
@@ -76,6 +78,10 @@ describe('Form Page check', function() {
     //TODO: Match state name with zipcode value
     expect((formFields.licState_d1).isPresent()).toBe(true);
     expect((formFields.licAge_d1).isDisplayed()).toBe(true);
+    expect((formFields.incidentsBtnYes).isPresent()).toBe(true);
+    expect((formFields.incidentsBtnNo).isPresent()).toBe(true);
+    expect((formFields.incidentsChecked)).toBe('true');
+    expect((formFields.addDriver).isDisplayed()).toBe(true);
   });
 
   it('Should display Additional Information', function(){
@@ -95,6 +101,8 @@ describe('Form Page check', function() {
     expect((formFields.email).isDisplayed()).toBe(true);
     expect((formFields.dayPhone).isDisplayed()).toBe(true);
     expect((formFields.tcpa).isDisplayed()).toBe(true);
+    expect((formFields.tcpaContent)).not.toBe(null);
+    expect((formFields.tcpaContent)).toBe('By entering a phone number and submitting this form, I am providing Katch LLC and one or more of these other organizations* or their agents my signature expressly consenting to receive telemarketing calls or texts (including by prerecorded messages or using an autodialer or automated means) at the number provided, even if the number I provide is on a corporate, state, or national Do Not Call list. I understand that my consent is not required to make a purchase, and I represent that I am at least 18 years old and agree to the Privacy Policy and Terms of Use, including the arbitration provision and class action waiver contained therein.');
     expect((formFields.getquotes).isDisplayed()).toBe(true);
     expect((formFields.secure).isDisplayed()).toBe(true);
   });

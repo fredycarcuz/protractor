@@ -15,6 +15,7 @@ var FormFields = function(){
 	this.milesYear_v1 = functions.getSelectById('milesYear_v1');
 	this.vehGarage_v1 = functions.getSelectById('vehGarage_v1');
 	this.vehSecurity_v1 = functions.getSelectById('vehSecurity_v1');
+	this.addVehicle = element(by.id('js-ktButton__addVehicle'));
 
 	this.driversGroup =  element(by.id('driversGroup'));	
 	this.driverfname_d1 =  element(by.id('driverfname_d1'));
@@ -31,6 +32,10 @@ var FormFields = function(){
 	this.suspended_d1 = functions.getSelectById('suspended_d1'); //License Status
 	this.licState_d1 = element(by.id('licState_d1'));
 	this.licAge_d1 =  element(by.id('licAge_d1'));
+	this.incidentsBtnYes = element(by.id('incident_yes_d1'));
+	this.incidentsBtnNo = element(by.id('incident_no_d1'));
+	this.incidentsChecked = this.incidentsBtnNo.getAttribute('checked');
+	this.addDriver = element(by.id('js-ktButton__addDriver'));
 	
 	this.carried_inpYes = element(by.id('carried_inpYes'));
 	this.carried_inpNo =  element(by.id('carried_inpNo'));
@@ -47,7 +52,8 @@ var FormFields = function(){
 	this.email = element(by.id('email'));
 	this.dayPhone = element(by.id('dayPhone'));
 
-	this.tcpa = element(by.css('.tcpa'));
+	this.tcpa = element(by.id('js-ktContent__tcpa'));
+	this.tcpaContent = this.tcpa.getText();
 	this.getquotes = element(by.id('getquotes')); 
 	this.secure = element(by.css('.secure'));
 }
