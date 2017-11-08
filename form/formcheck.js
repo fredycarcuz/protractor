@@ -25,20 +25,6 @@ describe('Form Page check', function() {
     expect((header.phone).isDisplayed()).toBe(true);//phone
   });
 
-  it('Should check the hiddens', function(){
-    expect(hiddens.userID).not.toBe(null);
-    expect(hiddens.interactionId).not.toBe(null);
-    expect(hiddens.cid).not.toBe(null);
-    expect(hiddens.source_track).not.toBe(null);
-    //form
-    expect(hiddensForm.drvfrmcnt).not.toBe(null);
-    expect(hiddensForm.vehfrmcnt).not.toBe(null);
-    expect(hiddensForm.incidents).not.toBe(null);
-    expect(hiddensForm.url_params).not.toBe(null);
-    expect(hiddensForm.leadid_token).not.toBe(null);
-    expect(hiddensForm.multivehicle).not.toBe(null);
-  });
-
   it('Should check form steps', function(){
     expect((steps.stepContainer).isDisplayed()).toBe(true);
     expect((steps.step1).isDisplayed()).toBe(true);
@@ -113,8 +99,25 @@ describe('Form Page check', function() {
     expect((footer.terms).isDisplayed()).toBe(true); // Terms of Use
   });
 
+  it('Should check the hiddens', function(){
+    expect(hiddens.userID).not.toBe(null);
+    expect(hiddens.interactionId).not.toBe(null);
+    expect(hiddens.cid).not.toBe(null);
+    expect(hiddens.source_track).not.toBe(null);
+    //form
+    expect(hiddensForm.drvfrmcnt).not.toBe(null);
+    expect(hiddensForm.vehfrmcnt).not.toBe(null);
+    expect(hiddensForm.incidents).not.toBe(null);
+    expect(hiddensForm.url_params).not.toBe(null);
+    expect(hiddensForm.leadid_token).not.toBe(null);
+    expect(hiddensForm.multivehicle).not.toBe(null);
+    expect(hiddensForm.multidriverhousehold).not.toBe(null);
+    //expect(hiddensForm.trustedToken).not.toBe(null);
+    //expect(hiddensForm.trustedUrl).not.toBe(null);
+  });
+
   //custom for site: example
     // landing/cciu/landing.js (zipbox/content )
 
-  // browser.pause();
+   //browser.pause();
 });
