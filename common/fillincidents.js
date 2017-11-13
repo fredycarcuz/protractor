@@ -35,6 +35,6 @@ var FillIncidents = function(driverNumber,incidentTypeList){
             element(by.id('js-ktButton__addAnotherIncident-'+ driverNumber)).click();//Add Incident
         }
     }
-}
+};
 
 module.exports = FillIncidents;

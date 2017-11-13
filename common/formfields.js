@@ -56,6 +56,6 @@ var FormFields = function(){
 	this.tcpaContent = this.tcpa.getText();
 	this.getquotes = element(by.id('getquotes')); 
 	this.secure = element(by.css('.secure'));
-}
+};
 
 module.exports = FormFields;

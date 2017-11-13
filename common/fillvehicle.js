@@ -17,6 +17,6 @@ var FillVehicle = function(driverList){
             browser.sleep(400);
         }
     }
-}
+};
 
 module.exports = FillVehicle;

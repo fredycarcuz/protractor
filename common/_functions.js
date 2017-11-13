@@ -27,7 +27,7 @@ var Functions = function(){
     			callback();
     		});
     	});
-	}
-}
+	};
+};
 
 module.exports = Functions;

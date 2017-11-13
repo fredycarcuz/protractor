@@ -1,26 +1,26 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['form/formcheck.js'],
+  specs: ['validations/landing.js'],
   capabilities: {
-  	'browserName': 'firefox'
+    'browserName': 'firefox'
   },
-  jasmineNodeOpts:{
-	showColors: true  	
+  jasmineNodeOpts: {
+    showColors: true
   },
-  params:{
-  	site:{
-  		alias: 'CCIU',
-      src: 'cciu_google',
-  		url:'http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/',
-      page: 'form/',
-  		zip:'90210',
-  		source_track: '',
-      paths:{
+  params: {
+    site: {
+      alias: 'AIF',
+      src: '',
+      url: 'http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/',
+      page: 'get-quotes/',
+      zip: '78505',
+      source_track: '',
+      paths: {
         sitelinks: 'sitelinks/',
         thankyou: 'thankyou/',
         landing: 'get-quotes/'
       }
-  	},
-    driverInfo: require('./data/singleDriver.json')
+    },
+    driverInfo: require('./data/multiVehicleCurrentlyInsuredIncidents.json')
   }
 };

@@ -10,6 +10,6 @@ var HiddensForm = function(){
 	//this.trustedUrl = element(by.name('xxTrustedFormCertUrl')).getAttribute('value');
 	//this.multidriverhousehold = element(by.name('multidriverhousehold')).getAttribute('value');
 	
-}
+};
 
 module.exports = HiddensForm;

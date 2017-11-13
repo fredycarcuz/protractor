@@ -13,6 +13,6 @@ var PrefillInformation = function(){
     //Personal
     var FillPersonal = require('../common/fillpersonal');
     var fillPersonal = FillPersonal(driverList);
-}
+};
 
 module.exports = PrefillInformation;

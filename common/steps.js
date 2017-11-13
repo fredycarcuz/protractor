@@ -3,6 +3,6 @@ var Steps = function(){
 	this.step1 = element(by.css('.first'));
 	this.step2 = element(by.css('.middle'));
 	this.step3 = element(by.css('.last'));
-}
+};
 
 module.exports = Steps;

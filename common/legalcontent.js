@@ -11,6 +11,6 @@ var LegalContent = function(){
 	this.organizationRandom = this.organizationList.get(25).getText();//some random #
 	this.organizationLast = this.organizationList.last().getText();
 	}
-}
+};
 
 module.exports = LegalContent;

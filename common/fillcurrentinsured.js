@@ -17,6 +17,6 @@ var FillCurrentInsured = function(driverList){
     element(by.id('dur_insured_yr')).sendKeys('5');
     element(by.id('dur_insured_mnth')).sendKeys('10');
     }
-}
+};
 
 module.exports = FillCurrentInsured;

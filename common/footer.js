@@ -5,6 +5,6 @@ var Footer = function(){
 	//this.copyright = element(by.id(''));
 	//this.contact = element(by.id(''));
 	//this.email = element(by.id(''));
-}
+};
 
 module.exports = Footer;

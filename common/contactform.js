@@ -17,6 +17,6 @@ var ContactForm = function(){
 	this.captcha = element(by.id('captcha'));
 	this.reloadcaptcha = element(by.id('reloadcaptcha'));
 	this.btnsend = element(by.id('btnsend'));
-}
+};
 
 module.exports = ContactForm;

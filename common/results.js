@@ -6,6 +6,6 @@ var Results = function(){
 	this.description = element(by.id('content')).all(by.css('.vm-snippet'));
 	this.buttons = element(by.id('content')).all(by.css('.vm-quotes'));
 	this.contentByState = element(by.id('article'));
-}
+};
 
 module.exports = Results;

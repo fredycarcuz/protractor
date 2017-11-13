@@ -3,6 +3,6 @@ var Hiddens = function(){
 	this.interactionID = element(by.name('interactionID')).getAttribute('value');
 	this.cid = element(by.name('CID')).getAttribute('value');
 	this.source_track = element(by.name('source_track')).getAttribute('value');
-}
+};
 
 module.exports = Hiddens;
