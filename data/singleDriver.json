@@ -1,27 +1,27 @@
 { 
-        "drivers":[
-        {"driver": {
-            "firstName":"Jonh",
-            "lastName":"Rambo",
-            "dob":"12111988",
-            "gender":"M",
-            "residenceStatus":"Own"
-        }
-        }
-        ],
-        "vehicles":[
-        {"vehicle": {
-            "year": "2015",
-            "make": "AUDI",
-            "model": "A3",
-            "subModel": "SEDAN 4 DOOR"
-        }
-        }
-        ],
-        "personal": {
-            "currentlyInsured" : false,
-            "address": "13 Fake Street",
-            "email": "qa@vantagemedia.com",
-            "phone": "3056464444"
-        }
+    "drivers":[
+    {"driver": {
+        "firstName":"Jonh",
+        "lastName":"Rambo",
+        "dob":"12111988",
+        "gender":"M",
+        "residenceStatus":"Own"
     }
+    }
+    ],
+    "vehicles":[
+    {"vehicle": {
+        "year": "2015",
+        "make": "AUDI",
+        "model": "A3",
+        "subModel": "SEDAN 4 DOOR"
+    }
+    }
+    ],
+    "personal": {
+        "currentlyInsured" : false,
+        "address": "13 Fake Street",
+        "email": "qa@vantagemedia.com",
+        "phone": "3056464444"
+    }
+}
