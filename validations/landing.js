@@ -4,7 +4,6 @@ var Zipbox = require('../common/zipbox');
 var loadPage = new LoadPage();
 var zipbox = new Zipbox();
 
-
 describe('Validate the zipbox', function () {
 
   beforeEach(function(){
