@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['validations/landing.js'],
+  specs: ['thankyou/thankyoucheck.js','thankyou/cciu/landing.js'],
   capabilities: {
     'browserName': 'firefox'
   },
@@ -8,12 +8,16 @@ exports.config = {
     showColors: true
   },
   params: {
+    config:{
+      env: 'dev',
+      device: 'desktop',
+    },
     site: {
-      alias: 'AIF',
+      alias: 'CCIU',
       src: '',
       url: 'http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/',
-      page: 'get-quotes/',
-      zip: '78505',
+      page: 'thankyou/',
+      zip: '90245',
       source_track: '',
       paths: {
         sitelinks: 'sitelinks/',
@@ -21,6 +25,6 @@ exports.config = {
         landing: 'get-quotes/'
       }
     },
-    driverInfo: require('./data/multiVehicleCurrentlyInsuredIncidents.json')
+    driverInfo: require('./data/multiVehicle.json')
   }
 };

@@ -9,7 +9,7 @@ describe('CCIU Thankyou Check', function () {
 	    } else if (browser.params.site.src === 'cciu_google') {
 	    	expect(phoneNumber.getText()).toBe('Phone : 800-713-2712');
 	    }
-  })
+  });
 
   it('Should display CCIU Content Correctly', function () {
 		// var ctaText = element(by.id('vm-cta-content')).all(by.tagName('h2')).last();
@@ -17,5 +17,5 @@ describe('CCIU Thankyou Check', function () {
 		// var articleTitle = element(by.id('article')).all(by.tagName('h2')).first();
 		// expect(ctaText.getText()).toBe('Below are the top Car Insurance Providers in ' + state);
     expect(ctaTextSub.getText()).toBe('Don\'t Wait - Click your result below to see your best rate!\nSee Your Custom Quote Now!');
-  })
-})
+  });
+});

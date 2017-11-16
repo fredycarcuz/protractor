@@ -4,6 +4,9 @@
             "firstName":"Jonh",
             "lastName":"Rambo",
             "dob":"12111988",
+            "dobm":"12",
+            "dobd":"11",
+            "doba":"1988",
             "gender":"M",
             "residenceStatus":"Own",
             "incidentsList": {
@@ -18,6 +21,9 @@
             "firstName":"Mary",
             "lastName":"Cooper",
             "dob":"12111990",
+            "dobm":"12",
+            "dobd":"11",
+            "doba":"1988",
             "gender":"F",
             "residenceStatus":"Own",
             "relationship": "Spouse",
@@ -31,10 +37,10 @@
         ],
         "vehicles":[
         {"vehicle": {
-            "year": "2015",
-            "make": "AUDI",
-            "model": "A3",
-            "subModel": "SEDAN 4 DOOR"
+            "year": "2014",
+            "make": "BMW",
+            "model": "320",
+            "subModel": "I SEDAN 4 DOOR"
         }
         }
         ],
