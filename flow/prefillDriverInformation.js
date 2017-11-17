@@ -42,7 +42,7 @@ describe('Flow for Single Driver', function() {
   it('Should display the Thankyou Page', function(){
     //TYP
     functions.waitToLoad();
-    //expect(element(by.css('.cta-upper')).isDisplayed()).toBe(true); 
+    expect(element(by.css('.cta-upper')).isDisplayed()).toBe(true); 
     //browser.pause();
   });
 

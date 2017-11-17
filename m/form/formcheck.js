@@ -5,7 +5,6 @@ var Hiddens = require('../../common/hiddens');
 var HiddensForm = require('../../common/hiddensform');
 var StepsMobile = require('../../common/stepsmobile');
 var FormFields = require('../../common/formfields');
-var Functions = require('../../common/_functions');
 
 var loadPage = new LoadPage();
 var header = new Header();
@@ -14,7 +13,7 @@ var hiddens = new Hiddens();
 var hiddensForm = new HiddensForm();
 var stepsMobile = new StepsMobile();
 var formFields = new FormFields();
-var functions = new Functions();
+
 
 var driverList = browser.params.driverInfo;
 
@@ -49,6 +48,7 @@ describe('Mobile Form Page check', function() {
     expect(formFields.vehGarage_v1).toBe('No Cover');
     expect(formFields.vehSecurity_v1).toBe('No Alarm');
   });
+
   it('Should fill Vehicle Information', function(){
     //Fill Vehicle(s)
     var FillVehicle = require('../../common/fillvehiclem');
@@ -68,10 +68,18 @@ describe('Mobile Form Page check', function() {
     expect((formFields.moreVehiclesNo).isDisplayed()).toBe(true);
     element(by.id('getquotes')).click();
   });
+  it('Should check form Step 2', function(){
+    var until = protractor.ExpectedConditions;
+    browser.wait(until.presenceOf(formFields.driverfname_d1), 3000, 'Waiting for information to be displayed');
+    expect((stepsMobile.stepContainer).isDisplayed()).toBe(true);
+    expect((stepsMobile.stepText).isDisplayed()).toBe(true);
+    expect((stepsMobile.stepText).getText()).toBe('Drivers');
+    expect((stepsMobile.stepBar).isDisplayed()).toBe(true);
+    expect((stepsMobile.stepStep).isDisplayed()).toBe(true);
+    expect((stepsMobile.stepStep).getText()).toBe('2 of 4');
+  });
 
   it('Should display Driver Information', function(){
-    var until = protractor.ExpectedConditions;
-    browser.wait(until.presenceOf(formFields.primaryVehicle), 3000, 'Waiting for information to be displayed');
     expect((formFields.driversGroup).isDisplayed()).toBe(true);
     expect((formFields.driverfname_d1).isDisplayed()).toBe(true);
     expect((formFields.driverlname_d1).isDisplayed()).toBe(true);
@@ -109,10 +117,19 @@ describe('Mobile Form Page check', function() {
     element(by.id('getquotes')).click();
   });
 
-  it('Should display Incidents Information', function(){
+  it('Should check form Step 3', function(){
     browser.driver.sleep(1000);
     var until = protractor.ExpectedConditions;
     browser.wait(until.presenceOf(formFields.moreIncidents), 5000, 'Waiting for information to be displayed');
+    expect((stepsMobile.stepContainer).isDisplayed()).toBe(true);
+    expect((stepsMobile.stepText).isDisplayed()).toBe(true);
+    expect((stepsMobile.stepText).getText()).toBe('Drivers');
+    expect((stepsMobile.stepBar).isDisplayed()).toBe(true);
+    expect((stepsMobile.stepStep).isDisplayed()).toBe(true);
+    expect((stepsMobile.stepStep).getText()).toBe('3 of 4');
+  });
+
+  it('Should display Incidents Information', function(){
     expect((formFields.incidentsBtnYes).isPresent()).toBe(true);
     expect((formFields.incidentsBtnNo).isPresent()).toBe(true);
     expect((formFields.incidentsChecked)).toBe('true');

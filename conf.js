@@ -1,9 +1,10 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['thankyou/thankyoucheck.js','thankyou/cciu/landing.js'],
+  specs: ['flow/prefillDriverInformation.js'],
   capabilities: {
     'browserName': 'firefox'
   },
+  SELENIUM_PROMISE_MANAGER: 1,
   jasmineNodeOpts: {
     showColors: true
   },
@@ -16,7 +17,7 @@ exports.config = {
       alias: 'CCIU',
       src: '',
       url: 'http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/',
-      page: 'thankyou/',
+      page: 'get-quotes/',
       zip: '90245',
       source_track: '',
       paths: {
