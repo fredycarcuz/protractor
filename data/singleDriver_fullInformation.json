@@ -1,0 +1,52 @@
+{ 
+    "drivers":[
+    {"driver": {
+        "firstName":"Jonh",
+        "lastName":"Rambo",
+        "dob":"12111988",
+        "dobm":"12",
+        "dobd":"11",
+        "doba":"1988",
+        "gender":"M",
+        "residenceStatus":"Own",
+        "occupation":"Government",
+        "education": "Masters Degree",
+        "maritalStatus": "Married",
+        "creditEvaluation" : "Excellent",
+        "residenceYears": "5",
+        "residenceMonths": "5",
+        "licenseStatus": "Permit",
+        "licenseState": "CA",
+        "ageFirstLicensed": "17"
+    }
+    }
+    ],
+    "vehicles":[
+    {"vehicle": {
+        "year": "2014",
+        "make": "BMW",
+        "model": "320",
+        "subModel": "I SEDAN 4 DOOR",
+        "ownership": "Owned",
+        "primaryUse": "Pleasure",
+        "annualMileage": "50001+",
+        "nightParking": "Garage",
+        "securitySystem": "OnStar"
+    }
+    }
+    ],
+    "personal": {
+        "currentlyInsured" : false,
+        "address": "13 Fake Street",
+        "email": "qa@vantagemedia.com",
+        "phone": "3056464444",
+        "coverageDesired": "Maximum Coverage",
+        "comprehensiveAmount": "500",
+        "collisionAmount": "1000",
+        "multiplePolicyDiscount": "Yes",
+        "sr22": "Y",
+        "zipCode": "90245",
+        "city": "El Segundo",
+        "state": "CA"        
+    }
+}

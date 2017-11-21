@@ -13,6 +13,35 @@ var FillDriver = function (driverList) {
     element(by.id('dob_d' + driverNumber)).sendKeys(driverList.drivers[i].driver.dob);// issue
     element(by.id('gender_d' + driverNumber)).$('[value="' + driverList.drivers[i].driver.gender + '"]').click();
     element(by.id('residenceStatus_d' + driverNumber)).$('[value="' + driverList.drivers[i].driver.residenceStatus + '"]').click();
+    
+    //Rest of Driver information
+    if (driverList.drivers[i].driver.occupation) {
+        element(by.id('occupation_d'+ driverNumber)).$('[value="'+driverList.drivers[i].driver.occupation+'"]').click(); browser.sleep(300);
+    }
+    if (driverList.drivers[i].driver.education) {
+        element(by.id('education_d'+ driverNumber)).$('[value="'+driverList.drivers[i].driver.education+'"]').click(); browser.sleep(300);
+    }
+    if (driverList.drivers[i].driver.maritalStatus) {
+        element(by.id('maritalstat_d'+ driverNumber)).$('[value="'+driverList.drivers[i].driver.maritalStatus+'"]').click(); browser.sleep(300);
+    }
+    if (driverList.drivers[i].driver.creditEvaluation) {
+        element(by.id('credRating_d'+ driverNumber)).$('[value="'+driverList.drivers[i].driver.creditEvaluation+'"]').click(); browser.sleep(300);
+    }
+    if (driverList.drivers[i].driver.residenceYears) {
+        element(by.id('residenceYears_d'+ driverNumber)).$('[value="'+driverList.drivers[i].driver.residenceYears+'"]').click(); browser.sleep(300);
+    }
+    if (driverList.drivers[i].driver.residenceMonths) {
+        element(by.id('residenceMonths_d'+ driverNumber)).$('[value="'+driverList.drivers[i].driver.residenceMonths+'"]').click(); browser.sleep(300);
+    }
+    if (driverList.drivers[i].driver.licenseStatus) {
+        element(by.id('suspended_d'+ driverNumber)).$('[value="'+driverList.drivers[i].driver.licenseStatus+'"]').click(); browser.sleep(300);
+    }
+    if (driverList.drivers[i].driver.licenseState) {
+        element(by.id('licState_d'+ driverNumber)).$('[value="'+driverList.drivers[i].driver.licenseState+'"]').click(); browser.sleep(300);
+    }
+    if (driverList.drivers[i].driver.ageFirstLicensed) {
+        element(by.id('licAge_d'+ driverNumber)).sendKeys(driverList.drivers[i].driver.ageFirstLicensed); browser.sleep(500);
+    }
 
     if (driverNumber > 1) {
       element(by.id('relationship_d' + driverNumber)).$('[value="' + driverList.drivers[i].driver.relationship + '"]').click();
