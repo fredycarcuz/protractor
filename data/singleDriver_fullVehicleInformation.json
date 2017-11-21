@@ -1,0 +1,36 @@
+{ 
+    "drivers":[
+    {"driver": {
+        "firstName":"Jonh",
+        "lastName":"Rambo",
+        "dob":"12111988",
+        "dobm":"12",
+        "dobd":"11",
+        "doba":"1988",
+        "gender":"M",
+        "residenceStatus":"Own",
+        "primaryUse": "Pleasure",
+        "annualMileage": "50001+",
+        "nightParking": "Garage",
+        "securitySystem": "OnStar"
+
+    }
+    }
+    ],
+    "vehicles":[
+    {"vehicle": {
+        "year": "2014",
+        "make": "BMW",
+        "model": "320",
+        "subModel": "I SEDAN 4 DOOR",
+        "ownership": "Owned"
+    }
+    }
+    ],
+    "personal": {
+        "currentlyInsured" : false,
+        "address": "13 Fake Street",
+        "email": "qa@vantagemedia.com",
+        "phone": "3056464444"
+    }
+}

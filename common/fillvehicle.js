@@ -22,6 +22,7 @@ var FillVehicle = function(driverList){
             addVehicle.click();
             browser.sleep(400);
         }
+
     }
 };
 

@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['flow/prefillDriverInformation.js'],
+  specs: ['specs/behavior/flow/prefillDriverInformation.js'],
   capabilities: {
     'browserName': 'firefox'
   },
@@ -10,8 +10,8 @@ exports.config = {
   },
   params: {
     config:{
-      env: 'dev',
-      device: 'desktop',
+      env: 'dev',//'dev', 'pro'
+      device: 'desktop', //'desktop', 'mobile'
     },
     site: {
       alias: 'CCIU',
