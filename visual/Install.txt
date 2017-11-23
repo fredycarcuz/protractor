@@ -1,0 +1,21 @@
+Steps to Install
+
+Prerequisites
+-------------------------------------------
+1. Install Python
+	-https://www.python.org/
+2. Install Node
+	-https://nodejs.org/en/
+
+Steps
+------------------------------------------------------------------------
+
+1. Clone the repository 
+2. Go to /protractor/visual and edit 'sitelist.js' 
+	-Replace "~fcarcuz" with your use dev name
+3. Open Console and go to /protractor/visual/
+4. Install backstopjs
+	-npm install -g backstopjs
+5. Run backstop commands see examples on 'readme.txt' file
+
+--------------------------------------------------------------------------
