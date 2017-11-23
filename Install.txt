@@ -1,0 +1,26 @@
+Steps to Install
+
+Prerequisites
+-------------------------------------------
+1. Install Node
+	-https://nodejs.org/en/
+
+Steps
+------------------------------------------------------------------------
+
+1. Clone the repository 
+2. Go to /protractor/ and edit 'conf.js' 
+	-Replace 'specs' value: 'specs/landing/landingcheck.js'
+	-Replace "~fcarcuz" from 'url' with your use dev name
+	-Replace 'page' value: 'get-quotes/'
+3. Open Console and go to /protractor/
+4. Install protractor
+	-npm install -g protractor
+5. Run test by using:
+	protractor conf.js
+
+Test should run and show failures if any.
+--------------------------------------------------------------------------
+7. Change 'specs' value with any .js file on the specs folder
+	example: 'specs/general/organizations/organizations.js'
+	run always: protractor conf.js
