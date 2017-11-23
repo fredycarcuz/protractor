@@ -133,6 +133,20 @@ describe('Mobile Form Page check', function() {
     expect((formFields.incidentsBtnYes).isPresent()).toBe(true);
     expect((formFields.incidentsBtnNo).isPresent()).toBe(true);
     expect((formFields.incidentsChecked)).toBe('true');
+  });
+
+  it('Should fill Incidents Information', function (){
+    var driverNumber = 0;
+    for (var i = 0; i < driverList.drivers.length; i++) {
+      driverNumber = i +1;
+    if (!driverList.drivers[i].driver.incidentsList) {
+            // 'No' is selected by default.
+    } else {
+      var FillIncidents = require('../../../common/fillincidentsm');
+      var fillIncidents = FillIncidents(driverNumber, driverList.drivers[i].driver.incidentsList);
+    }
+    }
+    browser.driver.sleep(300);
     element(by.id('getquotes')).click();
   });
 
@@ -142,7 +156,14 @@ describe('Mobile Form Page check', function() {
     browser.wait(until.presenceOf(formFields.moreIncidents), 5000, 'Waiting for information to be displayed');    
     expect((formFields.carried_inpYes).isDisplayed()).toBe(true);
     expect((formFields.carried_inpNo).isDisplayed()).toBe(true);
-    formFields.carried_inpNo.click();
+    //formFields.carried_inpNo.click();
+  });
+
+  it('should fill Current Insured Information', function() {
+    //Carrier checkbox      
+    var FillCurrentInsured = require('../../../common/fillcurrentinsured');
+    var fillCurrentInsured = FillCurrentInsured(driverList);
+    browser.driver.sleep(300);
   });
   
   it('Should display Additional Information', function(){
@@ -165,9 +186,17 @@ describe('Mobile Form Page check', function() {
     expect((formFields.getquotes).isDisplayed()).toBe(true);
     expect((formFields.secure).isDisplayed()).toBe(true);
   });
-  //TODO
-  xit('Should display the Footer', function(){
+
+  it('should fill Personal Information', function() {
+    //Personal
+    var FillPersonal = require('../../../common/fillpersonal');
+    var fillPersonal = FillPersonal(driverList);
+    browser.driver.sleep(300);
   });
+
+  //TODO
+  /*it('Should display the Footer', function(){
+  });*/
 
   it('Should check the hiddens', function(){
     expect(hiddens.userID).not.toBe(null);
@@ -182,6 +211,13 @@ describe('Mobile Form Page check', function() {
     expect(hiddensForm.leadid_token).not.toBe(null);
     expect(hiddensForm.multivehicle).not.toBe(null);
     expect(hiddensForm.multidriverhousehold).not.toBe(null);
+    browser.driver.sleep(300);
+  });
+
+  xit('should submit the form', function() {
+    browser.pause();
+    element(by.id('getquotes')).click();
+    expect(element(by.css('.green')).isDisplayed()).toBe(true);
   });
   //custom for site: example
     // landing/cciu/landing.js (zipbox/content )

@@ -4,7 +4,7 @@ Fill Drivers by using the date on diverList
 */
 var FillDriver = function (driverList) {
     // +Add Another Driver
-  var addDriver = element.all(by.css('.btntype2')).last();
+  var addDriver = element.all(by.css('.addBtn')).first();
     // Drivers Information
   for (var i = 0; i < driverList.drivers.length; i++) {
     var driverNumber = i + 1;
@@ -19,15 +19,7 @@ var FillDriver = function (driverList) {
     if (driverNumber > 1) {
       element(by.id('relationship_d' + driverNumber)).$('[value="' + driverList.drivers[i].driver.relationship + '"]').click();
     }
-    /*
-        // Incidents
-    if (!driverList.drivers[i].driver.incidentsList) {
-            // 'No' is selected by default.
-    } else {
-      var FillIncidents = require('../common/fillincidents');
-      var fillIncidents = FillIncidents(driverNumber, driverList.drivers[i].driver.incidentsList);
-    }
-    */
+    
     if (driverNumber < driverList.drivers.length) {
       addDriver.click();
       browser.sleep(400);

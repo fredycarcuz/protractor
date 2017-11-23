@@ -1,6 +1,10 @@
 var FillPersonal = function(driverList){
     //Personal
+    if (browser.params.config.device === 'desktop') {
     element(by.id('contaddress')).sendKeys(driverList.personal.address);
+    }else{
+        element(by.id('contAdd1')).sendKeys(driverList.personal.address);
+    }
     element(by.id('email')).sendKeys(driverList.personal.email);
     element(by.id('dayPhone')).sendKeys(driverList.personal.phone);
 

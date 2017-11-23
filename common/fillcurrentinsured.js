@@ -1,11 +1,19 @@
 var FillCurrentInsured = function(driverList){
-	//Carrier checkbox      
+	//Carrier checkbox
+    var carriedNo = '';
+    var carriedYes = '';
+    if (browser.params.config.device === 'desktop') {
+        carriedNo = element(by.id('carried_inpNo'));
+        carriedYes = element(by.id('carried_inpYes'));
+    } else{
+         carriedNo = element(by.id('carried_no_d'));
+         carriedYes =  element(by.id('carried_yes_d'));        
+    }
+
     if(!driverList.personal.currentlyInsured){
-    var carriedNo = element(by.id('carried_inpNo'));
     var newENo = carriedNo.element(by.xpath('..'));
     newENo.click();
     }else{       
-    var carriedYes = element(by.id('carried_inpYes'));
     var newEYes = carriedYes.element(by.xpath('..'));
     newEYes.click();
     browser.sleep(700);
