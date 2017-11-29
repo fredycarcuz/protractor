@@ -78,7 +78,7 @@ var FormFields = function(){
 	this.dayPhone = element(by.id('dayPhone'));
 
 	if (browser.params.config.device === 'mobile') {
-		this.tcpa = element(by.id('lbl-tcpa'));
+		this.tcpa = element(by.css('#lbl-tcpa label'));
 		this.tcpaContent = this.tcpa.getText();
 	} else{
 		this.tcpa = element(by.id('js-ktContent__tcpa'));

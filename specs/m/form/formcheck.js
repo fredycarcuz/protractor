@@ -214,8 +214,7 @@ describe('Mobile Form Page check', function() {
     browser.driver.sleep(300);
   });
 
-  xit('should submit the form', function() {
-    browser.pause();
+  it('should submit the form', function() {
     element(by.id('getquotes')).click();
     expect(element(by.css('.green')).isDisplayed()).toBe(true);
   });

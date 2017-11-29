@@ -6,8 +6,18 @@ var FillPersonal = function(driverList){
         element(by.id('contAdd1')).sendKeys(driverList.personal.address);
     }
     element(by.id('email')).sendKeys(driverList.personal.email);
-    element(by.id('dayPhone')).sendKeys(driverList.personal.phone);
 
+    //fix for mobile
+    if (browser.params.config.device === 'mobile') {
+        browser.sleep(1000);
+        for (var i = 0; i < driverList.personal.phone.length; i++) {
+            element(by.id('dayPhone')).sendKeys(driverList.personal.phone[i]);
+            browser.sleep(100);
+        }
+    }else {
+        element(by.id('dayPhone')).sendKeys(driverList.personal.phone);
+    }
+    
     if (driverList.personal.coverageDesired) {
         element(by.id('protection')).$('[value="'+driverList.personal.coverageDesired+'"]').click(); browser.sleep(300);
     }
