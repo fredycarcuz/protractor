@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4723/wd/hub',
-  specs: ['specs/m/thankyou/thankyoucheck.js'],
+  specs: ['specs/m/form/formcheck.js'],
   capabilities: {
     browserName: 'chrome',
     platformName: 'Android',
@@ -17,7 +17,7 @@ exports.config = {
       alias: 'CCIU',
       src: 'cciu_google',
       url: 'http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/m/',
-      page: 'thankyou/',
+      page: 'form/',
       zip: '90245',
       source_track: '',
       paths: {
@@ -26,6 +26,6 @@ exports.config = {
         landing: 'get-quotes/'
       }
     },
-    driverInfo: require('./data/singleDriver.json')
+    driverInfo: require('./data/singleDriverCurrentlyInsuredIncidents.json')
   }
 };

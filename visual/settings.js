@@ -41,14 +41,27 @@ if (myArguments.pages) {
     var pages = defaultpages; // Default: the landing
 }
 
+//devices
+if (!myArguments.device) {
+    myArguments.device = 'desktop'; // Default dev
+}
 
+if (myArguments.device === 'mobile') {
+    myArguments.testUrl = myArguments.testUrl + 'm/';
+    myArguments.refUrl = myArguments.refUrl + 'm/';
+}
+
+//scenarios
 for (var k = 0; k < pages.length; k++) {
+    var currentPage = pages[k];
+    currentPage = currentPage.replace(/[^a-z-]/g,'');
+
     scenarios.push({
         "label": siteList.sites[siteAliasId].site.alias + '_' + pages[k],
         "cookiePath":"",
-        "referenceUrl": myArguments.refUrl + pages[k],
-        "url": myArguments.testUrl + pages[k],
-        "hideSelectors": [],
+        "referenceUrl": myArguments.refUrl + pages[k] + '?zip=' + siteList.sites[siteAliasId].site.zip,
+        "url": myArguments.testUrl + pages[k]  + '?zip=' + siteList.sites[siteAliasId].site.zip,
+        "hideSelectors": siteList.sites[siteAliasId].site.hideSelectors[currentPage],
         "removeSelectors": [],
         "hoverSelector": "",
         "clickSelector": "",
@@ -63,10 +76,10 @@ for (var k = 0; k < pages.length; k++) {
     });
 }
 
-// Configuration
-module.exports = {
-    "id": siteList.sites[siteAliasId].alias,
-    "viewports": [
+
+//viewports
+var viewports={
+    "desktop": [
     {
         "name": "medium",
         "width": 768,
@@ -80,6 +93,26 @@ module.exports = {
         "width": 1280,
         "height": 800
     }],
+    "mobile": [
+    {
+        "name": "small",
+        "width": 320,
+        "height": 568
+    }, {
+        "name": "medium",
+        "width": 375,
+        "height": 667
+    }, {
+        "name": "large",
+        "width": 375,
+        "height": 633
+    }]
+};
+
+// Configuration
+module.exports = {
+    "id": siteList.sites[siteAliasId].alias,
+    "viewports": viewports[myArguments.device],
     "onBeforeScript": "chromy/onBefore.js",
     "onReadyScript": "chromy/onReady.js",
     "scenarios": scenarios,

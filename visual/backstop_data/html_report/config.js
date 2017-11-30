@@ -3,11 +3,11 @@ report({
   "tests": [
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\01392536625_CCIU_get-quotes__0_document_0_medium.png",
-        "test": "..\\bitmaps_test\\20171123-101229\\01392536625_CCIU_get-quotes__0_document_0_medium.png",
+        "reference": "..\\bitmaps_reference\\758692293_CCIU_form__0_document_0_small.png",
+        "test": "..\\bitmaps_test\\20171130-145459\\758692293_CCIU_form__0_document_0_small.png",
         "selector": "document",
-        "fileName": "01392536625_CCIU_get-quotes__0_document_0_medium.png",
-        "label": "CCIU_get-quotes/",
+        "fileName": "758692293_CCIU_form__0_document_0_small.png",
+        "label": "CCIU_form/",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "diff": {
@@ -16,19 +16,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "misMatchPercentage": "0.02",
-          "analysisTime": 212
+          "misMatchPercentage": "0.00"
         }
       },
       "status": "pass"
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\01392536625_CCIU_get-quotes__0_document_1_large.png",
-        "test": "..\\bitmaps_test\\20171123-101229\\01392536625_CCIU_get-quotes__0_document_1_large.png",
+        "reference": "..\\bitmaps_reference\\758692293_CCIU_form__0_document_1_medium.png",
+        "test": "..\\bitmaps_test\\20171130-145459\\758692293_CCIU_form__0_document_1_medium.png",
         "selector": "document",
-        "fileName": "01392536625_CCIU_get-quotes__0_document_1_large.png",
-        "label": "CCIU_get-quotes/",
+        "fileName": "758692293_CCIU_form__0_document_1_medium.png",
+        "label": "CCIU_form/",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "diff": {
@@ -37,19 +36,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "misMatchPercentage": "0.02",
-          "analysisTime": 196
+          "misMatchPercentage": "0.00"
         }
       },
       "status": "pass"
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\01392536625_CCIU_get-quotes__0_document_2_xlarge.png",
-        "test": "..\\bitmaps_test\\20171123-101229\\01392536625_CCIU_get-quotes__0_document_2_xlarge.png",
+        "reference": "..\\bitmaps_reference\\758692293_CCIU_form__0_document_2_large.png",
+        "test": "..\\bitmaps_test\\20171130-145459\\758692293_CCIU_form__0_document_2_large.png",
         "selector": "document",
-        "fileName": "01392536625_CCIU_get-quotes__0_document_2_xlarge.png",
-        "label": "CCIU_get-quotes/",
+        "fileName": "758692293_CCIU_form__0_document_2_large.png",
+        "label": "CCIU_form/",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "diff": {
@@ -58,8 +56,7 @@ report({
             "width": 0,
             "height": 0
           },
-          "misMatchPercentage": "0.02",
-          "analysisTime": 189
+          "misMatchPercentage": "0.00"
         }
       },
       "status": "pass"

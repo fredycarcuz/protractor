@@ -6,8 +6,20 @@ var siteList = {
       		"src": '',
       		"devUrl": "http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/",
 		    "prodUrl": "https://www.cheapcarinsuranceusa.com/",
-		    "zip": "90245",
+		    "devUrlm": "http://dev-sem.vm.local/~fcarcuz/auto-sem-cheapcarinsuranceusa.com/m/",
+		    "prodUrlm": "https://www.cheapcarinsuranceusa.com/m/",
+		    "zip": "82001",
 		    "source_track": "",
+		    "hideSelectors":{
+		    	"quotes": [".vm-logo",".vm-title",".vm-snippet"],
+		    	"thankyou": [".vm-logo",".vm-title",".vm-snippet"],
+		    	"form": [],
+		    	"get-quotes": [],
+		    	"contact":[],
+				"termsofuse":[],
+				"privacy-policy":[],
+				"organizations":[]
+		    }
     		}
 		},
 		{"site":
@@ -16,7 +28,7 @@ var siteList = {
       		"src": '',
       		"devUrl": "http://dev-sem.vm.local/~fcarcuz/auto-sem-autoinsurancefinders.com/",
 		    "prodUrl": "https://www.autoinsurancefinders.com/",
-		    "zip": "90245",
+		    "zip": "82001",
 		    "source_track": "",
     		}
 		},
@@ -26,7 +38,7 @@ var siteList = {
       		"src": '',
       		"devUrl": "http://dev-sem.vm.local/~fcarcuz/auto-sem-autoinsurancedirect.com/",
 		    "prodUrl": "https://www.autoinsurancedirect.com/",
-		    "zip": "90245",
+		    "zip": "82001",
 		    "source_track": "",
     		}
 		},
@@ -36,7 +48,7 @@ var siteList = {
       		"src": '',
       		"devUrl": "http://dev-sem.vm.local/~fcarcuz/auto-sem-usaautoquotes.com/",
 		    "prodUrl": "https://www.usaautoquotes.com/",
-		    "zip": "90245",
+		    "zip": "82001",
 		    "source_track": "",
     		}
 		},
@@ -46,7 +58,7 @@ var siteList = {
       		"src": '',
       		"devUrl": "http://dev-sem.vm.local/~fcarcuz/auto-sem-vanguardinsurance.com/",
 		    "prodUrl": "https://www.vanguardinsurance.com",
-		    "zip": "90245",
+		    "zip": "82001",
 		    "source_track": "",
     		}
 		}

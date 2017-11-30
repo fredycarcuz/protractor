@@ -44,3 +44,8 @@ backstop reference --config=settings.js --siteAlias=CCIU --pageList=pagelist
 //Pass the site - Pass the URL 
 backstop reference --config=settings.js --refUrl=https://www.cheapcarinsuranceusa.com/
      backstop test --config=settings.js --testUrl=http://dev-sem.vm.local/~caguirre/auto-sem-cheapcarinsuranceusa.com/
+
+
+//Pass the device - defaul: desktop
+backstop reference --config=settings.js --device=mobile
+     backstop test --config=settings.js --device=mobile

@@ -2,7 +2,7 @@ exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['specs/behavior/flow/prefillDriverInformation.js'],
   capabilities: {
-    'browserName': 'firefox'
+    'browserName': 'chrome'
   },
   SELENIUM_PROMISE_MANAGER: 1,
   jasmineNodeOpts: {
@@ -26,6 +26,6 @@ exports.config = {
         landing: 'get-quotes/'
       }
     },
-    driverInfo: require('./data/multiVehicle.json')
+    driverInfo: require('./data/singleDriver.json')
   }
 };
